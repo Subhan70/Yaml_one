@@ -1,0 +1,29 @@
+parameters:
+- name: versionSpec
+  type: string
+  default: '3.x'
+- name: disableDownloadFromRegistry
+  type: boolean
+  default: false
+- name: allowUnstable
+  type: boolean
+  default: false
+- name: githubToken
+  type: string
+  dfault: ''
+- name: addToPath
+  type: boolean
+  default: true
+- name: architecture
+  type: string
+  default: 'x64'
+
+steps:
+  - task: UsePythonVersion@0
+    inputs
+      versionSpec: ${{ parameters.versionSpec }}
+      disableDownloadFromRegistry: ${{ parameters.disableDownloadFromRegistry }}
+      allowUnstable: ${{ parameters.allowUnstable }}
+      githubToken: ${{ parameters.githubToken }}
+      addToPath: ${{ parameters.addToPath }}
+      architecture: ${{ parameters.architecture }}
