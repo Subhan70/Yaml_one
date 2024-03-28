@@ -20,7 +20,7 @@ parameters:
 
 steps:
   - task: UsePythonVersion@0
-    displayName: 'Use Python ${{ parameters.versionSpec }}
+    displayName: 'Use Python ${{ parameters.versionSpec }}'
     inputs:
       versionSpec: ${{ parameters.versionSpec }}
       disableDownloadFromRegistry: ${{ parameters.disableDownloadFromRegistry }}
