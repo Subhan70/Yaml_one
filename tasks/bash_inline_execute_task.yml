@@ -3,7 +3,7 @@ parameters:
   type: string
 - name: workingDirectory
   type: string
-  default: $(Build.SoucesDirectory)
+  default: $(Build.SourcesDirectory)
 - name: failOnStderr
   type: boolean
   default: false
