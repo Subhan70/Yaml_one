@@ -1,0 +1,22 @@
+parameters:
+- name: script
+  type: string
+- name: workingDirectory
+  type: string
+  default: $(Build.SoucesDirectory)
+- name: failOnStderr
+  type: boolen
+  default: false
+- name: bashEnvValue
+  type: string
+  default: ''
+
+steps:
+  - task: Bash@3
+    displayName: 'Run Bash Script'
+    inputs:
+      targetType: 'inline'
+      script: ${{ parameters.script }}
+      workingDirectory: ${{ parameters.workingDirectory }}
+      failOnStderr: ${{ parameters.failOnStderr }}
+      bashEnvValue: ${{ parameters.bashEnvValue }}
