@@ -1,6 +1,6 @@
 parameters:
 - name: script
-  type: object
+  type: string
 - name: workingDirectory
   type: string
   default: $(Build.SourcesDirectory)
