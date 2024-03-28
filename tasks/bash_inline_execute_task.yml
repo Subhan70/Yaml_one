@@ -5,7 +5,7 @@ parameters:
   type: string
   default: $(Build.SoucesDirectory)
 - name: failOnStderr
-  type: boolen
+  type: boolean
   default: false
 - name: bashEnvValue
   type: string
