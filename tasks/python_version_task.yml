@@ -10,7 +10,7 @@ parameters:
   default: false
 - name: githubToken
   type: string
-  dfault: ''
+  default: ''
 - name: addToPath
   type: boolean
   default: true
